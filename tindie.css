@@ -1,0 +1,103 @@
+div.header {
+	margin-bottom: 20px;
+	display: table;
+}
+
+div.header span {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+p.title {
+	margin-bottom: 5px;
+	font-size: 22px;
+	font-family: Arial;
+	font-weight: bold;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+}
+
+p.date {
+	margin: 0;
+	font-size: 16px;
+	font-family: Serif;
+	font-weight: normal;
+}
+
+p.subtitle {
+	margin-top: 25px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;	
+	border: 3px solid #ddd;
+	width: 100%;
+}
+
+th {
+	color: black;
+}
+
+th,td {
+	padding:3px 7px 2px 7px;
+	border: 1px dotted #eee;
+}
+
+.options {
+	font-size: 12px;
+	margin-left: 20px;
+	font-style: italic;
+	
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+	font-weight: bold;
+}
+
+p.break {
+	margin-top: 50px;
+	page-break-after: always;
+}
+
+img.logo {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.fromaddress {
+	font-family: Arial;
+	margin: 0;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.fromaddress img {
+	float: left;
+	valign: middle;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.toaddress {
+	font-family: Arial;
+	margin-left: 150px;
+	margin-top: 50px;
+	font-size: 18px;
+	font-weight: bold;
+}
