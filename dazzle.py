@@ -54,7 +54,7 @@ else:
                     print("INTERNATIONAL: %s" % o['shipping_country'])
                 else:
                     try:
-                        with open("xml/%s.xml" % o['number'], 'w') as f:
+                        with open("%s/%s.xml" % (c.dir, o['number']), 'w') as f:
                             f.write("<DAZzle>\n")
                             f.write("\t<Prompt>No</Prompt>\n")
                             f.write("\t<Test>YES</Test>\n")
@@ -89,7 +89,7 @@ else:
                     except IOError as e:
                         print("Error writing file - %s" % e)
                     else:
-                        print("<a href=\"xml/%s.xml\" target=\"_blank\">%s.xml</a>" % (o['number'], o['number']))
+                        print("<a href=\"%s/%s.xml\" target=\"_blank\">%s.xml</a>" % (c.dir, o['number'], o['number']))
             else:
                 print("<h1>unpaid</h1>")
 

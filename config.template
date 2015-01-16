@@ -1,3 +1,4 @@
 # rename this file to config.txt, fill in the info below
 user = username
 key  = api-key
+xml  = xml directory

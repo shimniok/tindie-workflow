@@ -16,3 +16,5 @@ class Config:
                         self.user = ent[1]
                     if ent[0] == 'key':
                         self.key = ent[1]
+                    if ent[0] == 'dir':
+                        self.dir = ent[1]
