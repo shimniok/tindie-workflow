@@ -4,6 +4,7 @@ import requests
 import locale
 import cgitb
 import datetime
+from Config import Config
 
 # enable debugging
 cgitb.enable()
@@ -11,15 +12,13 @@ cgitb.enable()
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
 url = 'https://www.tindie.com/api/v1/order/?format=json&shipped=false'
-user = 'bot_thoughts'
-key = '6d0dd255f06d4f28d36cdda4f899b78c04b34536'
-r = ''
+c = Config()
 
 print("Content-Type: text/html\r\n\r\n")
 print
 
 try:
-    r = requests.get(url+'&username='+user+'&api_key='+key)
+    r = requests.get(url+'&username='+c.user+'&api_key='+c.key)
 except requests.exceptions.ConnectionError:
     print("<html><head/><body>ConnectionError</body></html>")
 else:
@@ -59,6 +58,6 @@ else:
 
     print("</tbody></table>")
     print("<br/>")
-    print("<a href='{0}&username={1}&api_key={2}'>Link to JSON data</a>".format(url, user, key))
+    print("<a href='{0}&username={1}&api_key={2}'>Link to JSON data</a>".format(url, c.user, c.key))
     print("</body>")
     print("</html>")

@@ -5,6 +5,7 @@ import locale
 import cgi
 import cgitb
 import datetime
+from Config import Config
 
 # enable debugging
 cgitb.enable()
@@ -15,15 +16,14 @@ locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 form = cgi.FieldStorage()
 
 url = 'https://www.tindie.com/api/v1/order/?format=json&shipped=false'
-user = 'bot_thoughts'
-key = '6d0dd255f06d4f28d36cdda4f899b78c04b34536'
+c = Config()
 r = ''
 
 print("Content-Type: text/html\r\n\r\n")
 print
 
 try:
-    r = requests.get(url + '&username=' + user + '&api_key=' + key)
+    r = requests.get(url + '&username=' + c.user + '&api_key=' + c.key)
 except requests.exceptions.ConnectionError:
     print "<html><head/><body>ConnectionError</body></html>"
 else:
