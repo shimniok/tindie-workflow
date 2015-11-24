@@ -21,7 +21,7 @@ r = ''
 
 print("Content-Type: text/html\r\n\r\n")
 print()
-print("<html><head><head/><body>")
+print("<html><head></head><body><frameset>")
 
 if form.getvalue('order'):
     all = False
@@ -46,8 +46,6 @@ else:
                 if o.get('status', '') == 'pending':
                     paid = False
                     break
-
-            print("<a href=\"https://www.tindie.com/orders/%s/\">#%s</a> - " % (o['number'], o['number']))
 
             if paid:
                 if o['shipping_country'] != 'United States':
@@ -89,11 +87,6 @@ else:
                     except IOError as e:
                         print("Error writing file - %s" % e)
                     else:
-                        print("<a href=\"%s/%s.xml\" target=\"_blank\">%s.xml</a>" % (c.dir, o['number'], o['number']))
-            else:
-                print("<h1>unpaid</h1>")
+                        print("<script>window.location.replace(\"https://www.tindie.com/orders/%s/\");</script>" % o['number'])
 
-            print("</br>")
-print("<html><head/><body>")
-
-
+print("</frameset></body></html>")
