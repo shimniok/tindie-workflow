@@ -1,4 +1,5 @@
 *.pyc
-config.txt
-.idea
-xml
+*.idea
+*.xml
+*.json
+*.txt
