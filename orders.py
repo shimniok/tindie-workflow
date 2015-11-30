@@ -28,7 +28,9 @@ else:
     count = data['meta']['total_count']
     orders = data['orders']
 
-    print('<head><LINK href="tindie.css" rel="stylesheet" type="text/css"></head><body>')
+    print('<head><LINK href="tindie.css" rel="stylesheet" type="text/css">')
+    print('<meta http-equiv="refresh" content="300">') # refresh
+    print('</head><body>')
 
     print("<table><thead><tr>")
     print("<th class=\"center\">Order</th>")
