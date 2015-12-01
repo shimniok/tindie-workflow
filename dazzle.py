@@ -49,7 +49,7 @@ else:
 
             if paid:
                 if o['shipping_country'] != 'United States':
-                    print("INTERNATIONAL: %s" % o['shipping_country'])
+                    print("<a href=\"https://www.tindie.com/orders/%s\">#%s</a> - INTERNATIONAL: %s" % (o['number'], o['number'], o['shipping_country']))
                 else:
                     try:
                         with open("%s/%s.xml" % (c.dir, o['number']), 'w') as f:
