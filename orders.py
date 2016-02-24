@@ -34,6 +34,7 @@ else:
 
     print("<table><thead><tr>")
     print("<th class=\"center\">Order</th>")
+    print("<th class=\"center\">Country</th>")
     print("<th class=\"center\">Status</th>")
     print("<th class=\"center\">Date</th>")
     print("<th class=\"left\">Email</th>")
@@ -60,6 +61,7 @@ else:
         print("<tr>")
         print("<td class=\"center\"><a href=\"https://www.tindie.com/orders/{0}/\" target=\"_blank\">{0}</a></td>".format(o['number']))
         d = datetime.datetime.strptime(o["date"], "%Y-%m-%dT%H:%M:%S.%f")
+        print("<td class=\"center\">{0}</td>".format(o['shipping_country']))
         print("<td class=\"center\">{0}</td>".format(paid))
         print("<td class=\"center\">{0}</td>".format(d.strftime('%b %d, %Y %H:%M')))
         print("<td class=\"left\"><a href=\"mailto:{0}?subject=Tindie%20Order%20#{1}\">{0}</a>".format(o['email'], o['number']))
