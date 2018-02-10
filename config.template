@@ -2,3 +2,7 @@
 user = username
 key  = api-key
 xml  = xml directory
+weight = default package weight
+height = default package height
+width = default package width
+length = default package length
