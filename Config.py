@@ -18,3 +18,11 @@ class Config:
                         self.key = ent[1]
                     if ent[0] == 'dir':
                         self.dir = ent[1]
+                    if ent[0] == 'weight':
+                        self.weight = ent[1]
+                    if ent[0] == 'height':
+                        self.height = ent[1]
+                    if ent[0] == 'length':
+                        self.length = ent[1]
+                    if ent[0] == 'width':
+                        self.width = ent[1]
