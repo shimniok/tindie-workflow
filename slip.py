@@ -12,7 +12,7 @@ cgitb.enable()
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
-# Create instance of FieldStorage 
+# Create instance of FieldStorage
 form = cgi.FieldStorage()
 
 url = 'https://www.tindie.com/api/v1/order/?format=json&shipped=false'
@@ -79,9 +79,9 @@ else:
                 print("<td class=\"center\">{0}</td>".format(i['quantity']))
                 print("<td class=\"center\">{0}</td>".format(locale.currency(i['price_total'])))
                 print("</tr>")
-            print("<tr><td colspan=3 class=\"right\">Shipping</td><td class=\"center\">{0}</td></tr>".format(locale.currency(o['total_shipping'])))
-            print("<tr><td colspan=3 class=\"right\">Discount</td><td class=\"center\">{0}</td></tr>".format(locale.currency(o['total_discount'])))
-            print("<tr><td colspan=3 class=\"right\">Total</td><td class=\"center\">{0}</td></tr>".format(locale.currency(o['total_subtotal'])))
+            print("<tr><td colspan=3 class=\"right\">Shipping</td><td class=\"center\">{0}</td></tr>".format(locale.currency(float(o['total_shipping']))))
+            print("<tr><td colspan=3 class=\"right\">Discount</td><td class=\"center\">{0}</td></tr>".format(locale.currency(float(o['total_discount']))))
+            print("<tr><td colspan=3 class=\"right\">Total</td><td class=\"center\">{0}</td></tr>".format(locale.currency(float(o['total_subtotal']))))
             print("</tbody></table>")
             print("<p class=\"subtitle\">Return Policy</p>")
             print("If it doesn't work, I'll replace it, fix it, or refund your money. I'll do whatever I can to make sure you're successful and satisfied.")
@@ -101,4 +101,3 @@ else:
         #print '</div>'
 
 # print '</body></html>'
-
